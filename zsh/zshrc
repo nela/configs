@@ -22,3 +22,4 @@ source $XDG_CONFIG_HOME/zsh/todo-init.sh
 source $XDG_CONFIG_HOME/zsh/asdf-python-virtualenvs.sh
 source $XDG_CONFIG_HOME/zsh/aliases.sh
 source $XDG_CONFIG_HOME/zsh/locale.sh
+source $XDG_CONFIG_HOME/zsh/miniconda-init.sh
