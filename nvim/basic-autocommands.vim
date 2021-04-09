@@ -19,9 +19,6 @@ au FocusGained,BufEnter * :checktime
 " Unset paste on InsertLeave.
 autocmd InsertLeave * silent! set nopaste
 
-" Make sure all types of requirements.txt files get syntax highlighting.
-autocmd BufNewFile,BufRead requirements*.txt set syntax=python
-
 " Ensure tabs don't get converted to spaces in Makefiles.
 autocmd FileType make setlocal noexpandtab
 
@@ -38,10 +35,6 @@ augroup END
 
 " Load Rainbow Parantheses
 au VimEnter * RainbowParentheses!!
-
-" Python Compile
-autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python' shellescape(@%, 1)<CR>
 
 " Java
 autocmd BufRead,BufNewFile *.java set filetype=java

@@ -24,7 +24,6 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive' " Git in VIM
 Plug 'tpope/vim-surround'
-Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'supercollider/scvim'
@@ -37,9 +36,14 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
+
+Plug 'neovim/nvim-lspconfig'
+
+" Plug 'ervandew/supertab'
+
 " Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
-Plug 'davidhalter/jedi-vim'
-Plug 'ycm-core/YouCompleteMe'
+" Plug 'davidhalter/jedi-vim'
+" Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
@@ -52,7 +56,12 @@ source $XDG_CONFIG_HOME/nvim/plugconfig/autopairs.vim
 source $XDG_CONFIG_HOME/nvim/plugconfig/rainbow_parantheses.vim
 source $XDG_CONFIG_HOME/nvim/plugconfig/scvim.vim
 source $XDG_CONFIG_HOME/nvim/plugconfig/fzf.vim
-source $XDG_CONFIG_HOME/nvim/plugconfig/ycm.vim
+"source $XDG_CONFIG_HOME/nvim/plugconfig/ycm.vim
+
+" Python config
+source $XDG_CONFIG_HOME/nvim/python.vim
+
+
 
 " Initialize basic autocommands
 source $XDG_CONFIG_HOME/nvim/basic-autocommands.vim
