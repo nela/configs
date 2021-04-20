@@ -19,7 +19,8 @@ source $XDG_CONFIG_HOME/zsh/compinstall.sh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $XDG_CONFIG_HOME/zsh/zsh-completions.sh
 source $XDG_CONFIG_HOME/zsh/todo-init.sh
-source $XDG_CONFIG_HOME/zsh/asdf-python-virtualenvs.sh
 source $XDG_CONFIG_HOME/zsh/aliases.sh
 source $XDG_CONFIG_HOME/zsh/locale.sh
-source $XDG_CONFIG_HOME/zsh/miniconda-init.sh
+source $XDG_CONFIG_HOME/zsh/asdf-python-virtualenvs.sh
+source $XDG_CONFIG_HOME/zsh/miniforge-init.sh
+source $HOME/.asdf/plugins/java/set-java-home.zsh
