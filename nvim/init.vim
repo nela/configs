@@ -14,30 +14,34 @@ endif
 
 call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 
-" Plug 'neovim/nvim-lspconfig'
+" Color scheme
 Plug 'tomasiser/vim-code-dark'
 Plug 'itchyny/lightline.vim'
 Plug 'lambdalisue/fern.vim'
 
-" Snippets engine ultisnips and Snippets
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Color display
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+" Basics
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive' " Git in VIM
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'supercollider/scvim'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-
-" Modify * to also work with visual selections.
 Plug 'nelstrom/vim-visual-star-search'
+
+" Snippets engine ultisnips and Snippets
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
+" Music stuff
+Plug 'supercollider/scvim'
 
 " fzf from brew installation
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
-
 Plug 'neovim/nvim-lspconfig'
+Plug 'mfussenegger/nvim-jdtls'
 
 " Plug 'ervandew/supertab'
 
@@ -60,8 +64,6 @@ source $XDG_CONFIG_HOME/nvim/plugconfig/fzf.vim
 
 " Python config
 source $XDG_CONFIG_HOME/nvim/python.vim
-
-
 
 " Initialize basic autocommands
 source $XDG_CONFIG_HOME/nvim/basic-autocommands.vim

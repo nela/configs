@@ -35,13 +35,3 @@ augroup END
 
 " Load Rainbow Parantheses
 au VimEnter * RainbowParentheses!!
-
-" Java
-autocmd BufRead,BufNewFile *.java set filetype=java
-autocmd FileType java set tabstop=4 shiftwidth=4 softtabstop=4
-
-autocmd FileType java map <buffer> <F8> :w<CR>:exec '!javac' shellescape(@%, 1)<CR>
-autocmd FileType java imap <buffer> <F8> <esc>:w<CR>:exec '!javac' shellescape(@%, 1)<CR>
-
-autocmd FileType java map <buffer> <F9> :w<CR>:exec '!java' shellescape(fnamemodify(@%, ':r'), 1)<CR>
-autocmd FileType java map <buffer> <F9> <esc>:w<CR>:exec '!java' shellescape(fnamemodify(@%, ':r'), 1)<CR>

@@ -5,8 +5,6 @@ noremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
-" Map redo to R
-nnoremap r <C-R>
 nnoremap <leader>h :split<Space>
 nnoremap <leader>v :vsplit<Space>
 
