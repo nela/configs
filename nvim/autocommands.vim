@@ -33,5 +33,5 @@ augroup CursorLine
     au WinLeave * setlocal nocursorline
 augroup END
 
-" Load Rainbow Parantheses
-au VimEnter * RainbowParentheses!!
+"" Load Rainbow Parantheses
+"au VimEnter * RainbowParentheses!!

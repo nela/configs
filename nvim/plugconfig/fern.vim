@@ -18,14 +18,14 @@ function! s:hijack_directory() abort
   execute printf('Fern %s', fnameescape(path))
 endfunction
 
-let g:fern#drawer_width               = 30
+let g:fern#drawer_width               = 35
 let g:fern#default_hidden             = 1
 let g:fern#disable_drawer_auto_quit   = 1
 let g:fern#disable_viewer_hide_cursor = 1
 let g:fern#disable_default_mappings   = 1
 
 noremap <silent> <Leader>z :Fern . -drawer -reveal=% -toggle<CR><C-w>=
-noremap <silent> <Leader>. :Fern %:h -drawer<CR><C-w>=
+" noremap <silent> <Leader>. :Fern %:h -drawer<CR><C-w>=
 
 function! s:init_fern() abort
   nmap <buffer><expr>

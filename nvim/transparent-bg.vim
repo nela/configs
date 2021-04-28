@@ -1,14 +1,10 @@
 " Enable syntax highlighting.
 syntax on
-" Set the color scheme
-colorscheme codedark
-
-" Set the color scheme to dark.
-set background=dark
 
 " Transparent Background and line Column
-autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi EndOfBuffer guibg=NONE ctermbg=NONE
+
 highlight clear LineNr
 highlight clear SignColumn
 

@@ -1,24 +1,18 @@
-" Java
+set tabstop=4 shiftwidth=4 softtabstop=4
 
-autocmd BufRead,BufNewFile *.java set filetype=java
-autocmd FileType java set tabstop=4 shiftwidth=4 softtabstop=4
+map <buffer> <F7> :w<CR>:exec '!javac *.java'<CR>
+imap <buffer> <F7> <esc>:w<CR>:exec '!javac *java'<CR>
 
-autocmd FileType java map <buffer> <F7> :w<CR>:exec '!javac *.java'<CR>
-autocmd FileType java imap <buffer> <F7> <esc>:w<CR>:exec '!javac *java'<CR>
+map <buffer> <F8> :w<CR>:exec '!javac' shellescape(@%, 1)<CR>
+imap <buffer> <F8> <esc>:w<CR>:exec '!javac' shellescape(@%, 1)<CR>
 
-autocmd FileType java map <buffer> <F8> :w<CR>:exec '!javac' shellescape(@%, 1)<CR>
-autocmd FileType java imap <buffer> <F8> <esc>:w<CR>:exec '!javac' shellescape(@%, 1)<CR>
-
-autocmd FileType java map <buffer> <F9> :w<CR>:exec '!java' shellescape(fnamemodify(@%, ':r'), 1)<CR>
-autocmd FileType java imap <buffer> <F9> <esc>:w<CR>:exec '!java' shellescape(fnamemodify(@%, ':r'), 1)<CR>
+map <buffer> <F9> :w<CR>:exec '!java' shellescape(fnamemodify(@%, ':r'), 1)<CR>
+imap <buffer> <F9> <esc>:w<CR>:exec '!java' shellescape(fnamemodify(@%, ':r'), 1)<CR>
 
 
 " Jdtls config
 if has('nvim-0.5')
-  augroup lsp
-    au!
-    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh', '/Users/nela/.local/share/eclipse/jdtls-workspace/' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')}})
-  augroup end
+    lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh', '/Users/nela/.local/share/lang-servers/eclipse/jdtls-workspace/' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')}})
 endif
 
 " -- `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to

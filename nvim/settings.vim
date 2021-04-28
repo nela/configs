@@ -5,6 +5,7 @@ set autowrite " writes on make/shell commands
 set autoread
 " set timeoutlen=150 " time to wait after ESC (default causes annoying delay)
 set path+=**
+
 set backspace=indent,eol,start
 
 silent !mkdir $HOME/.nvim/backup > /dev/null 2>&1
@@ -21,8 +22,13 @@ set ttyfast
 set hidden
 
 " Autocompletion (with AutoComplPop)
-set complete+=kspell
-set completeopt=menuone,longest
+" set complete+=kspell
+set completeopt=menuone,noselect
+" IMPORTANT: :help Ncm2PopupOpen for more information
+" set completeopt=noinsert,menuone,noselect
+
+" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
+" found' messages
 set shortmess+=c
 set nospell
 
@@ -71,6 +77,7 @@ set noerrorbells visualbell t_vb=
 set scrolloff=3
 set wildmenu
 set wildmode=longest,list,full
+set wildignore+=*.pyc,.git,.idea,*.o
 set showmatch
 set whichwrap=b,s,<,>
 set colorcolumn=80

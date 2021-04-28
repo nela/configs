@@ -7,7 +7,7 @@
 # If you're not using Linux you'll need to adjust the `-configuration` option
 # to point to the `config_mac' or `config_win` folders depending on your system.
 
-JAR="$XDG_DATA_HOME/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_*.jar"
+JAR="$XDG_DATA_HOME/lang-servers/eclipse/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_*.jar"
 
 GRADLE_HOME=$HOME/.gradle $JAVA_HOME/bin/java \
   -Declipse.application=org.eclipse.jdt.ls.core.id1 \
@@ -18,8 +18,8 @@ GRADLE_HOME=$HOME/.gradle $JAVA_HOME/bin/java \
   -Xms1g \
   -Xmx2G \
   -jar $(echo "$JAR") \
-  -configuration "$XDG_DATA_HOME/eclpse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/config_mac" \
-  -data "${1:-$XDG_DATA_HOME/java/jdtls-workspace}" \
+  -configuration "$XDG_DATA_HOME/lang-servers/eclipse/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/config_mac" \
+  -data "${1:-$XDG_DATA_HOME/lang-servers/eclipse/jdtls-workspace}"
   --add-modules=ALL-SYSTEM \
   --add-opens java.base/java.util=ALL-UNNAMED \
   --add-opens java.base/java.lang=ALL-UNNAMED
