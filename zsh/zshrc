@@ -24,3 +24,5 @@ source $XDG_CONFIG_HOME/zsh/locale.sh
 source $XDG_CONFIG_HOME/zsh/asdf-python-virtualenvs.sh
 source $XDG_CONFIG_HOME/zsh/miniforge-init.sh
 source $HOME/.asdf/plugins/java/set-java-home.zsh
+
+alias luamake=/Users/nela/.local/share/lang-servers/lua-language-server/3rd/luamake/luamake
