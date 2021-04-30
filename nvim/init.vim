@@ -20,8 +20,9 @@ endif
 
 call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 
-Plug 'lambdalisue/fern.vim'
-
+" Plug 'lambdalisue/fern.vim'
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 " Color scheme
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'tomasiser/vim-code-dark'
@@ -52,38 +53,34 @@ Plug 'mfussenegger/nvim-jdtls'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
+
 Plug 'hrsh7th/nvim-compe'
+
 Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'Seudev/vscode-java-snippets'
+
 Plug 'supercollider/scvim'
 
 " Unused
 " Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
 call plug#end()
 
-lua require('_compe')
-lua require('_nvim-treesitter')
-lua require('_nvim-autopairs')
-lua require ('lsp.lua')
-" lua require('plugin.compe')
-" lua require('plugin.nvim-treesitter')
-" lua require('plugin.nvim-autopairs')
-
+lua require '_compe'
+lua require '_nvim-treesitter'
+lua require '_nvim-autopairs'
+lua require '_nvim-tree'
+lua require 'lsp.lua'
+lua require 'lsp.python'
 
 source $XDG_CONFIG_HOME/nvim/plugconfig/lightline.vim
-source $XDG_CONFIG_HOME/nvim/plugconfig/fern.vim
 
 source $XDG_CONFIG_HOME/nvim/plugconfig/scvim.vim
 source $XDG_CONFIG_HOME/nvim/plugconfig/fzf.vim
 
 
-" Initialize Color Settings
-
-source $XDG_CONFIG_HOME/nvim/transparent-bg.vim
-
 let g:nvcode_termcolors=256
-
 " Set the color scheme
 colorscheme nvim-papadark
-
-" Set the color scheme to dark.
-set background=dark
+" set background=dark
+source $XDG_CONFIG_HOME/nvim/transparent-bg.vim
