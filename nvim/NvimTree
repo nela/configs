@@ -1,0 +1,22 @@
+~/.config/nvim/..
+ ✗ ftplugin/
+ ✗ java/
+ ★ lua/
+│  _compe/
+│  _nvim-autopairs/
+│  _nvim-tree/
+│ └  init.lua
+│  _nvim-treesitter/
+│ └  init.lua
+│  lsp/
+│  plugin/
+│  ◌ .DS_Store
+└  ★ _tokyonight.lua
+ plugconfig/
+ ★ plugin/
+ ◌ .DS_Store
+ autocommands.vim
+ ✗ init.vim
+ ✗ keybindings.vim
+ ✗ settings.vim
+ transparent-bg.vim

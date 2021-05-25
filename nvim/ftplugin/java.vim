@@ -12,7 +12,7 @@ imap <buffer> <F9> <esc>:w<CR>:exec '!java' shellescape(fnamemodify(@%, ':r'), 1
 
 " Jdtls config
 if has('nvim-0.5')
-    lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh', '/Users/nela/.local/share/lang-servers/eclipse/jdtls-workspace/' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')}})
+    lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh', '/Users/nela/.local/share/eclipse/jdtls-workspace/' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')}})
 endif
 
 " -- `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to

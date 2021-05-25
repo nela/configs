@@ -25,8 +25,20 @@ nnoremap td :tabclose<CR>
 nnoremap <leader>te :tabedit<Space>
 nnoremap <leader>tn :tabnext<Space>
 
+" Cycle through buffers
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
 "Cycle through splits.
-nnoremap <S-Tab> <C-w>w
+" nnoremap <S-Tab> <C-w>w
+
+
+" Toggle QuickFixList -> Vallorig/ListToggle
+" Cycle through quickfix list
+nnoremap <C-j> :cnext<CR>
+nnoremap <C-k> :cprev<CR>
+nnoremap <leader>j :lnext<CR>
+nnoremap <leader>k :lprev<CR>
 
 " Format paragraph (selected or not) to 80 character lines.
 nnoremap <leader>g gqap
@@ -36,7 +48,7 @@ xnoremap <leader>g gqa
 map <leader>I :setlocal autoindent!<CR>
 
 " Clear search highlights.
-map <leader><Space> :let @/=''<CR>
+map <leader><Space> :noh <CR>
 
 " Press * to search for the term under the cursor or a visual selection and
 " then press a key below to replace all instances of it in the current file.
@@ -83,7 +95,18 @@ inoremap <c-c> <ESC>
 
 xnoremap <silent> K <Plug>MoveUp
 xnoremap <silent> J <Plug>MoveDown
-
+nmap <leader>cf :ClearQuickfixList<CR>
 nmap <Leader>x <Plug>StripTrailingWhitespace
 
-nnoremap <silent> <Leader>c :call QuickFix_toggle()<CR>
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Using lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+" nnoremap <silent> <Leader>c :call QuickFix_toggle()<CR>

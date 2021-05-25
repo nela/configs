@@ -9,7 +9,7 @@
 source $(brew --prefix)/Cellar/asdf/$(ls /usr/local/Cellar/asdf)/asdf.sh
 
 export WORKON_HOME=$XDG_DATA_HOME/virtualenvs/nelaenvs
-export PROJECT_HOME=$HOME/pyprojects
+export PROJECT_HOME=$HOME/projects/python
 
 mkenv() {
   virtualenv -p $(asdf where python "$1")/bin/python "$WORKON_HOME"/"$2"

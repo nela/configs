@@ -20,7 +20,7 @@
 SCDIR=${SCDIR:-"~/"}
 
 TMUX=${TMUX:-"tmux"}
-SESSION=${SESSION:-"SuperCollider"}
+SESSION=${SESSION:-"sc"}
 
 # Check for command line arguments
 # First argument of the script is a path to a file

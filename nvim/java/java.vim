@@ -1,5 +1,3 @@
-" Java
-
 autocmd BufRead,BufNewFile *.java set filetype=java
 autocmd FileType java set tabstop=4 shiftwidth=4 softtabstop=4
 
@@ -12,12 +10,11 @@ autocmd FileType java imap <buffer> <F8> <esc>:w<CR>:exec '!javac' shellescape(@
 autocmd FileType java map <buffer> <F9> :w<CR>:exec '!java' shellescape(fnamemodify(@%, ':r'), 1)<CR>
 autocmd FileType java imap <buffer> <F9> <esc>:w<CR>:exec '!java' shellescape(fnamemodify(@%, ':r'), 1)<CR>
 
-
 " Jdtls config
 if has('nvim-0.5')
   augroup lsp
     au!
-    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh', '/Users/nela/.local/share/eclipse/jdtls-workspace/' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')}})
+    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh', '/Users/nela/.local/share/lang-servers/eclipse/jdtls-workspace/' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')}})
   augroup end
 endif
 

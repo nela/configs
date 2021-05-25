@@ -24,8 +24,6 @@ set hidden
 " Autocompletion (with AutoComplPop)
 " set complete+=kspell
 set completeopt=menuone,noselect
-" IMPORTANT: :help Ncm2PopupOpen for more information
-" set completeopt=noinsert,menuone,noselect
 
 " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
 " found' messages

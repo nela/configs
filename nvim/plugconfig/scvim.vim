@@ -1,4 +1,4 @@
-let g:scFlash = 1
+Let g:scFlash = 1
 let g:scSplitSize = 40
 let g:sclangTerm = "open -a iTerm.app"
 au BufEnter,BufWinEnter,BufNewFile,BufRead *.sc,*.scd set filetype=supercollider
