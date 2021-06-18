@@ -19,13 +19,8 @@ if empty(glob('$XDG_DATA_HOME/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('$XDG_DATA_HOME/nvim/plugged')
-
-" Plug 'lambdalisue/fern.vim'
-" for file icons
-" Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 " Color scheme
-Plug 'folke/tokyonight.nvim'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'MordechaiHadad/nvim-papadark'
@@ -53,6 +48,7 @@ Plug 'nvim-telescope/telescope.nvim'
 " Plug 'junegunn/fzf.vim'
 
 Plug 'neovim/nvim-lspconfig'
+Plug 'glepnir/lspsaga.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -70,7 +66,6 @@ Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
 call plug#end()
 
 lua require '_compe'
-lua require '_tokyonight'
 lua require '_nvim-treesitter'
 lua require '_nvim-autopairs'
 lua require '_nvim-tree'
