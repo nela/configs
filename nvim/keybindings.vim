@@ -25,6 +25,7 @@ nnoremap td :tabclose<CR>
 nnoremap <leader>te :tabedit<Space>
 nnoremap <leader>tn :tabnext<Space>
 
+nnoremap <leader>b :ls<CR>:b<Space>
 " Cycle through buffers
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
@@ -79,9 +80,8 @@ map <leader>ev :tabnew $MYVIMRC<CR>
 
 " Source Vim config file.
 map <leader>sv :source $MYVIMRC<CR>
-
-map <F4> :setlocal spell!<CR> "Toggle spell check.
-
+"Toggle spell check.
+map <F4> :setlocal spell!<CR>
 " Automatically fix the last misspelled word and jump back to where you were.
 nnoremap <leader>sp :normal! mz[s1z=`z<CR>
 

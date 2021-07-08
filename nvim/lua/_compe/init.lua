@@ -39,8 +39,9 @@ require'compe'.setup {
     -- snippets_nvim = {kind = "  "},
     -- ultisnips = {kind = "  "},
     -- treesitter = {kind = "  "},
-    emoji = {kind = " ﲃ  (Emoji)", filetypes={"markdown", "text"}}
+    emoji = {kind = " ﲃ  (Emoji)", filetypes={"markdown", "text"}},
      -- for emoji press : (idk if that in compe tho)
+    omni = { filetypes = { 'tex' } }
     }
 }
 
@@ -100,3 +101,5 @@ vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm('<CR>')", {expr = true})
+vim.api.nvim_set_keymap("i", "<C-c>", "compe#close('<C-c>')", {expr = true})

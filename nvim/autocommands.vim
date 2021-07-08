@@ -24,7 +24,11 @@ autocmd FileType make setlocal noexpandtab
 
 " Fix tex file type set
 autocmd BufRead,BufNewFile *.tex set filetype=tex
-autocmd FileType tex,latex markdown setlocal spell spellang=en_gb
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+" SuperCollider filetype
+autocmd BufRead,BufNewFile *.scd set filetype=supercollider
+autocmd BufRead,BufNewFile *.sc set filetype=supercollider
 
 " Only show the cursor line in the active buffer.
 augroup CursorLine

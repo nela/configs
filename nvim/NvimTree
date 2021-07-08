@@ -1,22 +1,22 @@
 ~/.config/nvim/..
- ✗ ftplugin/
- ✗ java/
- ★ lua/
-│  _compe/
-│  _nvim-autopairs/
-│  _nvim-tree/
-│ └  init.lua
-│  _nvim-treesitter/
-│ └  init.lua
-│  lsp/
+│  ★ ftplugin/
+│  java/
+│  ✗ lua/
+│  plugconfig/
+│ │ ◌ .DS_Store
+│ │ autopairs.vim
+│ │ fern.vim
+│ │ fzf.vim
+│ │ lightline.vim
+│ │ rainbow_parantheses.vim
+│ │ scvim.vim
+│ └ ultisnips.vim
 │  plugin/
-│  ◌ .DS_Store
-└  ★ _tokyonight.lua
- plugconfig/
- ★ plugin/
- ◌ .DS_Store
- autocommands.vim
- ✗ init.vim
- ✗ keybindings.vim
- ✗ settings.vim
- transparent-bg.vim
+│  src/
+│ ◌ .DS_Store
+│ ✗ autocommands.vim
+│ ✗ init.vim
+│ ✗ keybindings.vim
+│ ✗ NvimTree
+│ settings.vim
+└ transparent-bg.vim
